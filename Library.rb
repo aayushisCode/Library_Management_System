@@ -1,6 +1,5 @@
 require "securerandom"
-
-
+#module for input handling
 module InputHandler
   def read_input(prompt)
     print prompt
@@ -70,7 +69,7 @@ class Library
         @members=[]
         @issued_books=[]
     end
-
+		#display menu
     def display_menu
         loop do
             puts "\n =========Library Management System========"
@@ -141,7 +140,7 @@ class Library
         @books.each { |book| puts "Title: #{book[:title]}, Author: #{book[:author]}, Category: #{book[:category]}, Available Copies: #{book[:available_copies]}, ID: #{book[:id]}" }
 
     end
-
+		#searching a book
     def search_book
         if @books.empty? 
             puts " No book avaiable"
